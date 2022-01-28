@@ -5,11 +5,9 @@ os.chdir(path)
 files = sorted(os.listdir(os.getcwd()), key=os.path.getmtime)
 
 recent = files[-5:]
-
-print(recent)
-
 old = files[:5]
 
+print(recent)
 print(os.remove(old))
 
 
