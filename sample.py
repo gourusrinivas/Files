@@ -9,6 +9,17 @@ recent = files[-5:]
 print(recent)
 
 import os
+
+path='D:\Hello'
+os.chdir(path)
+files = sorted(os.listdir(os.getcwd()), key=os.path.getmtime)
+
+recent = files[0]
+
+print(os.remove(recent))
+
+
+import os
 from pathlib import Path
 from zipfile import ZipFile
 
