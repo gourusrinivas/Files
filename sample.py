@@ -14,9 +14,9 @@ path='D:\Hello'
 os.chdir(path)
 files = sorted(os.listdir(os.getcwd()), key=os.path.getmtime)
 
-recent = files[0]
+old = files[0]
 
-print(os.remove(recent))
+print(os.remove(old))
 
 
 import os
