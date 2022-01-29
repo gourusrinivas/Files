@@ -1,11 +1,11 @@
-import os
+import os, shutil
 
 path='D:\Hello'
 os.chdir(path)
 files = sorted(os.listdir(os.getcwd()), key=os.path.getmtime)
 
-recent = files[-1:]
-print(os.remove(recent))
+old = files[:5]
+print(shutil.rmtree(old))
 
 
 
