@@ -6,11 +6,11 @@ files = sorted(os.listdir(os.getcwd()), key=os.path.getmtime)
 
 recent = files.reverse()
 
-for file in files[5:]:
-    os.remove(os.path.join(path, file))
-for file in files[:5]:
+for f in files[5:]:
+    os.remove(os.path.join(path, f))
+for fl in files[:5]:
     
-    print(file)
+    print(fl)
 
 
 
