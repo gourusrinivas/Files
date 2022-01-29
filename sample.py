@@ -4,9 +4,8 @@ path='D:\Hello'
 os.chdir(path)
 files = sorted(os.listdir(os.getcwd()), key=os.path.getmtime)
 
-for i in files[-5:0]:
-    print(os.remove(i))
-
+recent = files[-5:]
+print(recent)
 
 
 
