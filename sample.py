@@ -7,7 +7,7 @@ files = sorted(os.listdir(os.getcwd()), key=os.path.getmtime)
 x = files[0]
 i = 1
 for i in x:
-    os.remove(i)
+    print(os.remove(i))
 
 
 
