@@ -1,4 +1,4 @@
-import os, pathlib
+import os, datetime
 
 path='D:\Hello'
 os.chdir(path)
@@ -8,9 +8,9 @@ recent = files.reverse()
 
 for f in files[5:]:
     os.remove(os.path.join(path, f))
-for fl in files[:5]:
+for f in files[:5]:
     
-    print(fl)
+    print(f)
 
 
 
