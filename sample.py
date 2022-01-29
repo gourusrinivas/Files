@@ -4,8 +4,13 @@ path='D:\Hello'
 os.chdir(path)
 files = sorted(os.listdir(os.getcwd()), key=os.path.getmtime)
 
-recent = files[-5:]
-print(recent)
+recent = files.reverse()
+
+for file in files[5:]:
+    os.remove(os.path.join(path, file))
+for file in files[:5]:
+    
+    print(file)
 
 
 
