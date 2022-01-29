@@ -8,7 +8,7 @@ recent = files.reverse()
 
 for f in files[5:]:
     os.remove(os.path.join(path, f))
-for f in files[:7]:
+for f in files[:6]:
     
     print(f)
 
