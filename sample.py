@@ -4,8 +4,8 @@ path='D:\Hello'
 os.chdir(path)
 files = sorted(os.listdir(os.getcwd()), key=os.path.getmtime)
 
-a = 'b'= files[:5]
-path = pathlib.path('b')
+a = string(input(files[:5]))
+path = pathlib.path(a)
 path.unlink()
 
 
