@@ -4,7 +4,7 @@ path='D:\Hello'
 os.chdir(path)
 files = sorted(os.listdir(os.getcwd()), key=os.path.getmtime)
 
-x = files[-7:0]
+x = files[0]
 for i in x:
     os.remove(x)
 
