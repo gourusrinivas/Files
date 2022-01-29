@@ -1,11 +1,11 @@
-import os, shutil
+import os, pathlib
 
 path='D:\Hello'
 os.chdir(path)
 files = sorted(os.listdir(os.getcwd()), key=os.path.getmtime)
 
-old = files[:5]
-print(shutil.rmtree(old))
+path = pathlib.path(files[:5])
+path.unlink()
 
 
 
