@@ -5,7 +5,7 @@ f = sorted(os.listdir(os.getcwd()), key=os.path.getctime)
 
 a = f.reverse()
 
-for i in f[6:]:
+for i in f[5:]:
     os.remove(os.path.join('D:\Hello', i))
 for i in f[:5]:
     
