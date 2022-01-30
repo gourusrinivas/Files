@@ -16,10 +16,10 @@ for i in f[:5]:
 
 import os
 import zipfile
-from zipfile import ZipFile
+path = 'D:\Hello'
+with zipfile.ZipFile('final.zip', 'w') as zipF:
+    for file in path:
+        zipF.write(file, compress_type = zipfile.ZIP_DEFLATED)
+        
 
-zipObj = ZipFile('Sample.zip')
-zinObj.write('D:\Hello')
-zipObj.close()
-         
 
