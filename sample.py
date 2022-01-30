@@ -22,7 +22,7 @@ exzip = zipfile.ZipFile('recent.zip', 'w')
 exzip.close()
 
 import os
-imort zipfile
+import zipfile
 os.chdir('D:\Hello')
 os.getcwd()
 myzipfile = zipfile.Zipfile('recent.zip')
