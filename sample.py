@@ -5,10 +5,12 @@ f = sorted(os.listdir(os.getcwd()), key=os.path.getmtime)
 
 f.reverse()
 
-for i in f[5:]:
+for i in f[4:]:
     os.remove(os.path.join('D:\Hello', i))
+    
+print("RECENT FILES ARE")
+
 for i in f[:5]:
-    print("RECENT FILES ARE")
     print(i)
 
 
