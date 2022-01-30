@@ -15,15 +15,13 @@ for i in f[:5]:
 
 import os
 import zipfile
-
-os.chdir('D:\Hello')
+p = 'D:\Hello'
+os.chdir(p)
 
 exzip = zipfile.ZipFile('recent.zip', 'w')
 exzip.close()
 
-import os
-import zipfile
-p = 'D:\Hello'
+
 os.chdir(p)
 os.getcwd()
 myzipfile = zipfile.ZipFile('recent.zip')
