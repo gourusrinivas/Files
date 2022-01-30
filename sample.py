@@ -15,14 +15,8 @@ for i in f[:5]:
 
 import os
 import zipfile
-p = 'D:\Hello'
-os.chdir(p)
 
-exzip = zipfile.ZipFile('recent.zip', 'w')
-exzip.close()
-
-
-os.chdir(p)
+os.chdir('D:\Hello')
 os.getcwd()
 myzipfile = zipfile.ZipFile('recent.zip')
 myzipfile.namelist()
