@@ -1,4 +1,4 @@
-import os, datetime
+import os
 
 os.chdir('D:\Hello')
 f = sorted(os.listdir(os.getcwd()), key=os.path.getmtime)
