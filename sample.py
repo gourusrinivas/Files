@@ -17,11 +17,11 @@ for i in f[:5]:
 import zipfile
 import os
 
-os.chdir('D:\Hello1')
+os.chdir('D:\Hello')
 exzip = zipfile.ZipFile('Recent.zip', 'w')
 path = 'D:\Hello'
 for x in os.listdir(path):
-    exzip.write(x, compress_type = zipfile.ZIP-DEFLATED)
+    exzip.write(x, compress_type = zipfile.ZIP_DEFLATED)
     
 exzip.close()
 
