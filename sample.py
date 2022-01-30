@@ -19,11 +19,11 @@ import os
 
 os.chdir('D:\Hello1')
 exzip = zipfile.ZipFile('Recent.zip', 'w')
-path = 'D:\Hello'
-for x in os.listdir(path):
+
+for x in os.listdir('D:\Hello'):
     exzip.write(x, compress_type = zipfile.ZIP_DEFLATED)
-    
 exzip.close()
+
 
          
 
