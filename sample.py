@@ -21,7 +21,8 @@ os.chdir('D:\Hello')
 
 exzip = zipfile.ZipFile('recent.zip', 'w')
 
-os.chdir('D:\Hello')
+r.zip = 'D:\Hello'
+os.chdir('r.zip')
 
 exzip = zipfile.ZipFile('recent.zip', 'r')
 
