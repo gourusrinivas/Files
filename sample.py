@@ -26,8 +26,8 @@ from pathlib import Path
 from zipfile import ZipFile
 
 
-DOWNLOAD_DIR = Path("D:\file")
-ZIPPED_FILE_DIR = Path("D:\file")
+DOWNLOAD_DIR = Path("D:\Hello")
+ZIPPED_FILE_DIR = Path("D:\Hello")
 
 
 def get_list_of_all_folders(download_dir: Path):
