@@ -19,6 +19,7 @@ os.chdir('D:\Hello')
 
 exzip = zipfile.ZipFile('recent.zip', 'w')
 
-exzip.write('D:\Hello', compress_type = zipfile.ZIP_DEFLATED)
+recent = open('D:\Hello')
+recent.read()
 
 exzip.close()
