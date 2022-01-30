@@ -14,7 +14,6 @@ for i in f[:5]:
     print(i)
 
 import patoolib
-import zipfile
 
 patoolib.create_zip("recent.zip", ('Hello'))
 
