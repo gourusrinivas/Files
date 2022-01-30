@@ -16,7 +16,7 @@ for i in f[:5]:
 
     
 with zipfile.ZipFile('final.zip', 'w') as zipF:
-    for file in f[5:]:
+    for file in f[:5]:
         zipF.write(file, compress_type=zipfile.ZIP_DEFLATED)
         
 
