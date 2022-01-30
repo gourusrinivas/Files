@@ -19,7 +19,7 @@ import zipfile
 path = 'D:\Hello'
 with zipfile.ZipFile('final.zip', 'w') as zipF:
     for file in path:
-        zipF.write(file, compress_type = zipfile.ZIP_DEFLATED)
+        zipF.write(file, compress_type=zipfile.ZIP_DEFLATED)
         
 
 
