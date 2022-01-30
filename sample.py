@@ -14,7 +14,6 @@ for i in f[:5]:
     print(i)
 
 
-os.chdir('D:\Hello')
 exzip = zipfile.ZipFile('recent.zip', 'w')
 
 exzip.close()
