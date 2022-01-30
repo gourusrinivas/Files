@@ -25,5 +25,5 @@ import os
 import zipfile
 os.chdir('D:\Hello')
 os.getcwd()
-myzipfile = zipfile.Zipfile('recent.zip')
+myzipfile = zipfile.ZipFile('recent.zip')
 myzipfile.namelist()
