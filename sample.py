@@ -14,6 +14,6 @@ for i in f[:5]:
     print(i)
 
 
-exzip = zipfile.ZipFile('recent.zip', 'w')
+exzip = zipfile.ZipFile('recent.zip', 'r')
 
 exzip.close()
