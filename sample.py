@@ -16,7 +16,7 @@ for i in f[:5]:
 import zipfile
 import os
 
-os.chdir('D:\Hello')
+os.chdir('D:\')
 exzip = zipfile.ZipFile('Recent.zip', 'w')
 exzip.close()
 
