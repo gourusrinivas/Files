@@ -15,11 +15,16 @@ for i in f[:5]:
 
 import os
 import zipfile
+
+
 os.chdir('D:\Hello')
 
 exzip = zipfile.ZipFile('recent.zip', 'w')
 
-recent.zip = open('D://Hello')
-recent.zip.read()
+os.chdir('D:\Hello')
+
+exzip = zipfile.ZipFile('recent.zip', 'r')
+
+
 
 exzip.close()
