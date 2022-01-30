@@ -13,10 +13,8 @@ print("RECENT FILES ARE")
 for i in f[:5]:
     print(i)
 
-import os
+import patoolib
 import zipfile
 
-os.chdir('D:\Hello')
-os.getcwd()
-myzipfile = zipfile.ZipFile('recent.zip')
-myzipfile.namelist()
+patoolib.create_zip("recent.zip", ('Hello'))
+
