@@ -19,7 +19,7 @@ os.chdir('D:\Hello')
 
 exzip = zipfile.ZipFile('recent.zip', 'w')
 
-recent = open('D:\Hello')
-recent.read()
+recent.zip = open('D://Hello.txt')
+recent.zip.read()
 
 exzip.close()
