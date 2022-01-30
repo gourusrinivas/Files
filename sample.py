@@ -16,16 +16,14 @@ for i in f[:5]:
 import os
 import zipfile
 
-
 os.chdir('D:\Hello')
 
 exzip = zipfile.ZipFile('recent.zip', 'w')
-
-r.zip = 'D:\Hello'
-os.chdir('r.zip')
-
-exzip = zipfile.ZipFile('recent.zip', 'r')
-
-
-
 exzip.close()
+
+import os
+imort zipfile
+os.chdir('D:\Hello')
+os.getcwd()
+myzipfile = zipfile.Zipfile('recent.zip')
+myzipfile.namelist()
