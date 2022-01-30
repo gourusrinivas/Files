@@ -1,16 +1,15 @@
 import os, datetime
 
-path='D:\Hello'
-os.chdir(path)
-files = sorted(os.listdir(os.getcwd()), key=os.path.getmtime)
+os.chdir('D:\Hello)
+f = sorted(os.listdir(os.getcwd()), key=os.path.getctime)
 
-recent = files.reverse()
+a = f.reverse()
 
-for f in files[6:]:
-    os.remove(os.path.join(path, f))
-for f in files[:6]:
+for i in f[6:]:
+    os.remove(os.path.join('D:\Hello', i))
+for i in f[:6]:
     
-    print(f)
+    print(i)
 
 
 
