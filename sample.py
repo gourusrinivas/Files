@@ -13,7 +13,17 @@ print("RECENT FILES ARE")
 for i in f[:5]:
     print(i)
 
-import patoolib
+import zipfile
+import os
 
-patoolib.create_zip("recent.zip", ('Hello'))
+os.chdir('D:\Hello')
+exzip = zipfile.ZipFile('Recent.zip', 'w')
+exzip.close()
+
+import os
+
+for fn in os.listdir("Recent.zip"):
+    with open(os.path.join('D:\Hello', fn), 'r') as f:
+        text = f.read()
+        
 
