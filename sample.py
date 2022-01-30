@@ -17,4 +17,5 @@ import os, zipfile
 
 os.chdir('D:\Hello')
 exzip = zipfile.ZipFile('recent.zip','w')
+exzip.write('D:\Hello', zipfile.ZIP_DEFLATED)
 exzip.close()
