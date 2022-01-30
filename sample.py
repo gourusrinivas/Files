@@ -22,7 +22,7 @@ exzip.close()
 
 import os
 
-for fn in os.listdir("Recent.zip"):
+for fn in os.listdir("Recent"):
     with open(os.path.join('D:\Hello', fn), 'r') as f:
         text = f.read()
         
