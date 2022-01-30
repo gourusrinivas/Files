@@ -13,11 +13,6 @@ print("RECENT FILES ARE")
 for i in f[:5]:
     print(i)
 
-import zipfile
-
-os.chdir('D:\Hello1')
-exzip = zipfile.ZipFile('Recent.zip', 'w')
-exzip.close()
 
 
          
