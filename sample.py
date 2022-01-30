@@ -1,4 +1,5 @@
 import os
+import zipfile
 
 os.chdir('D:\Hello')
 f = sorted(os.listdir(os.getcwd()), key=os.path.getmtime)
@@ -13,12 +14,9 @@ print("RECENT FILES ARE")
 for i in f[:5]:
     print(i)
 
-
-import os
-import zipfile
-path = 'Hello'
+    
 with zipfile.ZipFile('final.zip', 'w') as zipF:
-    for file in path:
+    for file in f[5:]:
         zipF.write(file, compress_type=zipfile.ZIP_DEFLATED)
         
 
