@@ -1,7 +1,7 @@
 import os, datetime
 
 os.chdir('D:\Hello')
-f = sorted(os.listdir(os.getcwd()), key=os.path.getctime)
+f = sorted(os.listdir(os.getcwd()), key=os.path.getmtime)
 
 f.reverse()
 
