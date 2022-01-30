@@ -21,6 +21,7 @@ os.chdir('D:\Hello1')
 exzip = zipfile.ZipFile('Recent.zip', 'w')
 
 for x in os.listdir('D:\Hello'):
+    if x.endswith('.'):
     exzip.write(x, compress_type = zipfile.ZIP_DEFLATED)
 exzip.close()
 
