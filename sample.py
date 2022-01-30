@@ -7,9 +7,9 @@ a = f.reverse()
 
 for i in f[6:]:
     os.remove(os.path.join('D:\Hello', i))
-for i in f[:6]:
+for i in f[:5]:
     
-    print(i)
+    print("RECENT FILES ARE: ", f)
 
 
 
