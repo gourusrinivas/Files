@@ -14,17 +14,12 @@ for i in f[:5]:
     print(i)
 
 
-import zipfile
 import os
+import zipfile
+from zipfile import ZipFile
 
-os.chdir('D:\Hello1')
-exzip = zipfile.ZipFile('Recent.zip', 'w')
-
-for x in os.listdir('D:\Hello'):
-    if x.endswith('.'):
-    exzip.write(x, compress_type = zipfile.ZIP_DEFLATED)
-exzip.close()
-
-
+zipObj = ZipFile('Sample.zip')
+zinObj.write('D:\Hello')
+zipObj.close()
          
 
