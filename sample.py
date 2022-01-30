@@ -10,7 +10,7 @@ for i in f[6:]:
     
 print("RECENT FILES ARE")
 
-for i in f[:6]:
+for i in f[:5]:
     print(i)
 
 
