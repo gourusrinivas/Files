@@ -13,11 +13,32 @@ print("RECENT FILES ARE")
 for i in f[:5]:
     print(i)
 
+import zipfile
 
+os.chdir('D:\Hello')
+exzip = zipfile.ZipFile('Recent.zip', 'w')
+exzip.close()
+
+
+         
 import os
+from pathlib import Path
+from zipfile import ZipFile
 
-for fn in os.listdir("Recent"):
-    with open(os.path.join('D:\Hello', fn), 'r') as f:
-        text = f.read()
-        
 
+DOWNLOAD_DIR = Path("D:\file")
+ZIPPED_FILE_DIR = Path("D:\file")
+
+
+def get_list_of_all_folders(download_dir: Path):
+    return [f for f in download_dir.iterdir() if download_dir.is_dir()]
+
+
+def zip_files():
+    folder_list = get_list_of_all_folders(DOWNLOAD_DIR)
+    with ZipFile(ZIPPED_FILE_DIR / "Other.zip", "w") as zip:
+        # writing each file one by one
+        for folder in folder_list:
+            zip.write(folder)
+           
+zip_files()
