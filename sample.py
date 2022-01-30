@@ -14,26 +14,16 @@ for i in f[:5]:
     print(i)
 
 
+import zipfile
+import os
+
+os.chdir('D:\Hello1')
+exzip = zipfile.ZipFile('Recent.zip', 'w')
+path = 'D:\Hello'
+for x in os.listdir(path):
+    exzip.write(x, compress_type = zipfile.ZIP-DEFLATED)
+    
+exzip.close()
 
          
-import os
-from pathlib import Path
-from zipfile import ZipFile
 
-
-DOWNLOAD_DIR = Path("D:\Hello")
-ZIPPED_FILE_DIR = Path("D:\Hello")
-
-
-def get_list_of_all_folders(download_dir: Path):
-    return [f for f in download_dir.iterdir() if download_dir.is_dir()]
-
-
-def zip_files():
-    folder_list = get_list_of_all_folders(DOWNLOAD_DIR)
-    with ZipFile(ZIPPED_FILE_DIR / "Recent.zip", "w") as zip:
-        # writing each file one by one
-        for folder in folder_list:
-            zip.write(folder)
-           
-zip_files()
