@@ -9,7 +9,7 @@ for i in f[6:]:
     os.remove(os.path.join('D:\Hello', i))
 for i in f[:5]:
     
-    print("RECENT FILES ARE: ", f)
+    print("RECENT FILES ARE: ", i)
 
 
 
