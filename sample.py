@@ -36,7 +36,7 @@ def get_list_of_all_folders(download_dir: Path):
 
 def zip_files():
     folder_list = get_list_of_all_folders(DOWNLOAD_DIR)
-    with ZipFile(ZIPPED_FILE_DIR / "Other.zip", "w") as zip:
+    with ZipFile(ZIPPED_FILE_DIR / "Recent.zip", "w") as zip:
         # writing each file one by one
         for folder in folder_list:
             zip.write(folder)
