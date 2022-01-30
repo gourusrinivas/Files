@@ -24,6 +24,6 @@ exzip.close()
 import os
 import zipfile
 
-os.getcwd('D:\\Hello')
+os.getcwd('D:\Hello')
 myzipfile = zipfile.ZipFile('recent.zip')
 myzipfile.namelist()
