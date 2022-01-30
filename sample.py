@@ -16,9 +16,9 @@ for i in f[:5]:
 import os
 import zipfile
 os.chdir('D:\Hello')
+
 exzip = zipfile.ZipFile('recent.zip', 'w')
 
-os.chdir('D:\Hello')
-exzip = zipfile.ZipFile('recent.zip', 'r')
+exzip.write('D:\Hello', compress_type = zipfile.ZIP_DEFLATED)
 
 exzip.close()
