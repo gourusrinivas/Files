@@ -22,5 +22,8 @@ with zipfile.ZipFile('Recent_Files.zip', 'w') as zipF:
     for file in f[:5]:
         zipF.write(file, compress_type=zipfile.ZIP_DEFLATED)
         
+        
+f.close()
+        
 
 
