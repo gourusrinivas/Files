@@ -2,8 +2,10 @@ import os
 import zipfile
 import json
 
-f = open('Data.json')
-data = json.load(f)
+with open('file.json','r') as filesdata:
+    filedata = json.load(filesdata)
+
+
 os.chdir('data')
 f = sorted(os.listdir(os.getcwd()), key=os.path.getmtime)
 
@@ -23,7 +25,7 @@ with zipfile.ZipFile('Recent_Files.zip', 'w') as zipF:
         zipF.write(file, compress_type=zipfile.ZIP_DEFLATED)
         
         
-f.close()
+
         
 
 
