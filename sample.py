@@ -6,7 +6,7 @@ with open('file.json','r') as filesdata:
     filedata = json.load(filesdata)
 
 
-os.chdir('file')
+os.chdir('filedata')
 f = sorted(os.listdir(os.getcwd()), key=os.path.getmtime)
 
 f.reverse()
