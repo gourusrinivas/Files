@@ -1,5 +1,6 @@
 {
-    "path": "D:\\Hello",
+    "path": "D:\\Hello\\S\\F",
     "files" : 5,
-    "Zip_file_name" : "D:\\Hello\\Recentfiles.zip"
+    "subdir" : "D:\\Hello\\S",
+    "Zip_file_name" : "D:\\Hello\\S\\F\\Recentfiles.zip"
 }
