@@ -1,7 +1,8 @@
 pipeline {
     agent { label 'Slave1' }
     
-    stages {
+    stages { 
+    parallel {
         stage('Python') {
             steps {
                 bat 'S_with_json.py'
@@ -38,4 +39,5 @@ pipeline {
             }
         }
     }
+}
 }
