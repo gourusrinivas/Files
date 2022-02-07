@@ -1,17 +1,15 @@
 pipeline {
-    agent { label 'Slave' }
+    agent none
     stages { 
         stage('Python') {
+        agent { label 'Slave' }
             steps {
-                bat 'S_with_json.py'
+                echo 'Hello'
             }
         }
      }
-}
-pipeline {
-    agent { label 'Slave' }
-    stages { 
-        stage('Python') {
+        stage('Python1') {
+        agent { label 'Slave' }
             steps {
                 echo 'HEllo'
             }
