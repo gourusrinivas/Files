@@ -1,6 +1,9 @@
 pipeline {
     agent none
     stages { 
+        stage('Build') {
+            agent any
+            }
         stage('Python') {
         agent { label 'Slave' }
             steps {
