@@ -7,12 +7,12 @@ pipeline {
             }
         }
      }
-    agent { label 'Slave1' }
+     agent { label 'Slave1' }
     stages { 
         stage('Python') {
             steps {
-                echo 'Hello'
+                bat 'S_with_json.py'
             }
         }
-    }
+     }
 }
