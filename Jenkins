@@ -1,0 +1,41 @@
+pipeline {
+    agent { label 'Slave1' }
+    
+    stages {
+        stage('Python') {
+            steps {
+                bat 'PythonwithJson.py'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing'
+            }
+        }
+        stage('Release') {
+            steps {
+                echo 'Releasing'
+            }
+        }
+    }
+    
+    agent { label 'Slave1' }
+    
+    stages {
+        stage('Python') {
+            steps {
+                bat 'PythonwithJson.py'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing'
+            }
+        }
+        stage('Release') {
+            steps {
+                echo 'Releasing'
+            }
+        }
+    }
+}
