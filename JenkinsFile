@@ -3,9 +3,18 @@ pipeline {
 
     stages {
         stage('Python') {
-            steps {
-                bat "S_with_json.py"
+        parallel {
+        stage('Single') {
+        steps {
+        bat "S_with_json.py"
             }
         }
+        stage('Single1') {
+        steps {
+        bat "S_with_json.py"
+        }
+        }
+        }
+       }
     }
 }
