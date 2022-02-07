@@ -8,3 +8,13 @@ pipeline {
         }
      }
 }
+pipeline {
+    agent { label 'Slave' }
+    stages { 
+        stage('Python') {
+            steps {
+                bat 'S_with_json.py'
+            }
+        }
+     }
+}
