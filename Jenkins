@@ -1,43 +1,18 @@
 pipeline {
     agent { label 'Slave1' }
-    
     stages { 
-    parallel {
         stage('Python') {
             steps {
                 bat 'S_with_json.py'
             }
         }
-        stage('Test') {
-            steps {
-                echo 'Testing'
-            }
-        }
-        stage('Release') {
-            steps {
-                echo 'Releasing'
-            }
-        }
-    }
-    
     agent { label 'Slave1' }
-    
-    stages {
+    stages { 
         stage('Python') {
             steps {
-                echo 'Code'
-            }
-        }
-        stage('Test') {
-            steps {
-                echo 'Testing'
-            }
-        }
-        stage('Release') {
-            steps {
-                echo 'Releasing'
+                bat 'S_with_json.py'
             }
         }
     }
 }
-}
+
