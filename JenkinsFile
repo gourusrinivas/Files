@@ -8,7 +8,7 @@ pipeline {
         }
      }
 }
-pipeline {
+pipeline1 {
     agent { label 'Slave' }
     stages { 
         stage('Python') {
