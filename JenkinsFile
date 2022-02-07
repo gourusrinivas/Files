@@ -1,6 +1,6 @@
 pipeline {
     agent('Slave1') { label 'Slave' }
-    agent('Slave2') { label 'Slave' }
+         ('Slave2') { label 'Slave' }
     stages { 
         stage('Python') { 
             steps {
