@@ -3,6 +3,9 @@ pipeline {
     stages { 
         stage('Build') {
             agent any
+            steps {
+                echo 'h'
+                }
             }
         stage('Python') {
         agent { label 'Slave' }
