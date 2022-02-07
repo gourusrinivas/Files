@@ -1,19 +1,18 @@
 pipeline {
-    agent { label 'Slave' }
+    agent none
     stages { 
         stage('Python') { 
+            agent('Slave1') { label 'Slave' }
             steps {
                 echo 'helloworld'
             }
         }
-     }
-     agent('Slave2') { label 'Slave' }
-    stages { 
-        stage('Python') { 
+        stage('Python1') { 
+            agent('Slave2') { label 'Slave' }
             steps {
                 echo 'hello'
             }
-        }
+        } 
      }
  }
             
