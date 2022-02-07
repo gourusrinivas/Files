@@ -8,12 +8,12 @@ pipeline {
         }
      }
 }
-pipeline1 {
+pipeline {
     agent { label 'Slave' }
     stages { 
         stage('Python') {
             steps {
-                bat 'S_with_json.py'
+                echo 'HEllo'
             }
         }
      }
