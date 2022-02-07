@@ -10,13 +10,13 @@ pipeline {
         stage('Python') {
         agent { label 'Slave' }
             steps {
-                bat 'PythonwithJson.py'
+                bat 'S_with_json.py'
             }
         }
         stage('Python1') {
         agent { label 'Slave' }
             steps {
-                bat 'PythonwithJson.py'
+                bat 'S_with_json.py'
             }
         }
      }
