@@ -7,9 +7,7 @@ pipeline {
             }
         }
      }
-}
-pipeline {
-     agent('Slave2') { label 'Slave' }
+    agent('Slave2') { label 'Slave' }
     stages { 
         stage('Python1') {
             steps {
