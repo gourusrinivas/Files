@@ -6,8 +6,8 @@ pipeline {
         parallel {
         stage('Single') {
         steps {
-        bat "S_with_json.py"
-            }
+        echo 'Hello world'
+        }
         }
         stage('Single1') {
         steps {
