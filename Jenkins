@@ -6,6 +6,8 @@ pipeline {
                 bat 'S_with_json.py'
             }
         }
+     }
+     
     agent { label 'Slave1' }
     stages { 
         stage('Python') {
@@ -13,6 +15,7 @@ pipeline {
                 bat 'S_with_json.py'
             }
         }
+    }
     }
 }
 
