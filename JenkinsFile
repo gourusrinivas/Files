@@ -1,12 +1,4 @@
 pipeline {
-    agent('Slave1') { label 'Slave' }
-    stages { 
-        stage('Python') {
-            steps {
-                echo 'hello'
-            }
-        }
-     }
     agent('Slave2') { label 'Slave' }
     stages { 
         stage('Python1') {
