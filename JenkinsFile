@@ -8,6 +8,11 @@ pipeline {
                 echo 'HEllo'
             }
         }
+        stage('Python') { 
+            steps {
+                echo 'HEllo world'
+            }
+        }
      }
  }
             
