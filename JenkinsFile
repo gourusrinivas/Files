@@ -1,15 +1,14 @@
-pipeline {
-    Slave1 {
-      node  { label 'Slave && Slave' } 
-        }  
+pipeline {  
     stages { 
-        stage('Python') { 
+        stage('Python') {
+           agent { label 'Slave' }
             steps {
                 echo 'HEllo'
             }
         }
-        stage('Python') { 
+        stage('Python1') { 
             steps {
+               agent { label 'Slave' }
                 echo 'HEllo world'
             }
         }
