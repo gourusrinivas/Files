@@ -1,7 +1,7 @@
 pipeline {  
-    stages { 
+    agent any {
+       stages { 
         stage('Python') {
-           agent { label 'Slave' }
             steps {
                 echo 'HEllo'
             }
