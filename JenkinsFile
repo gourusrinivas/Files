@@ -1,5 +1,7 @@
 pipeline {
-    agent { label 'Slave && Slave' } 
+    agent {
+      node  { label 'Slave && Slave' } 
+        }  
     stages { 
         stage('Python') { 
             steps {
