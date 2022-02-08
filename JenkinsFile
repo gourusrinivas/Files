@@ -1,9 +1,9 @@
 pipeline {
-    agent('Slave2'){ label 'Slave' } 
+    agent { label 'Slave && Slave' } 
     stages { 
         stage('Python') { 
             steps {
-                echo 'helloworld'
+                echo 'HEllo'
             }
         }
      }
