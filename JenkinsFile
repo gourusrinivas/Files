@@ -1,21 +1,18 @@
 pipeline {
     agent none
     stages {
-        stage('single run') {
-            parallel {
-                stage('Parallel Test 1') {
-                    agent  { label 'Slave' }
+             stage('Parallel Test 1') {
+                agent  { label 'Slave' }
                     steps {
                         bat 'S_with_json.py'
                     }
                 }
-                 stage('Parallel Test 2') {
-                     agent  { label 'Slave' }
+             stage('Parallel Test 2') {
+                agent  { label 'Slave' }
                      steps {
                         echo 'HEllo world'
-                    }
-                }
-            }
-        }
-    }
- } 
+                  }
+             }
+         }
+   }
+   
