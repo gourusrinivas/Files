@@ -1,17 +1,23 @@
 pipeline {
-   stages {
-     stage('Parallel Stage') {
-       parallel {
-         stage('P t1') {
-            agent { label 'Slave' }
-               echo 'Hello'
-             }
-         stage('p t2') {
-            agent { label 'Slave' }
-               echo 'world'          
-             }
-           }
-       }
-   }
+   agent any
+    stages {
+        stage('single run') {
+            parallel {
+                stage('Parallel Test 1') {
+                    steps {
+                        agent { label 'Slave' }
+                        echo 'hello'
+                    }
+                }
+    
+                 stage('Parallel Test 2') {
+                     steps {
+                         agent { label 'Slave' }
+                         echo 'World'
+                    }
+                }
+            }
+        }
+    }
 }
-            
+           
