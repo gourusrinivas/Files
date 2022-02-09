@@ -1,19 +1,9 @@
-pipeline {   
-       stages { 
-        stage('Python') {
-           agent { label 'Slave' }
-            steps {
-                echo 'HEllo'
-            }
-        }
-        stage('Python1') { 
-            steps {
-               agent { label 'Slave' }
-                steps {
-                echo 'HEllo'  
-            }
-        }
-     }
+parallel {
+   stage('P t1') {
+      agent { label 'Slave' }
    }
-
+   stage('p t2') {
+      agent { label 'Slave' }
+   }
+}
             
