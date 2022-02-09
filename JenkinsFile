@@ -12,7 +12,7 @@ pipeline {
                  stage('Parallel Test 2') {
                      agent  { label 'Slave' }
                      steps {
-                        bat 'S_with_json.py'
+                        echo 'HEllo world'
                     }
                 }
             }
