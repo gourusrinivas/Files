@@ -1,9 +1,13 @@
-parallel {
-   stage('P t1') {
-      agent { label 'Slave' }
-   }
-   stage('p t2') {
-      agent { label 'Slave' }
+pipeline {
+   stages {
+      parallel {
+         stage('P t1') {
+            agent { label 'Slave' }
+           }
+         stage('p t2') {
+            agent { label 'Slave' }
+          }
+       }
    }
 }
             
