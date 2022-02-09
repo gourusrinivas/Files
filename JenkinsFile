@@ -1,12 +1,16 @@
 pipeline {
    stages {
-      parallel {
+     stage('Parallel Stage') {
+       parallel {
          stage('P t1') {
             agent { label 'Slave' }
-           }
+               echo 'Hello'
+             }
          stage('p t2') {
             agent { label 'Slave' }
-          }
+               echo 'world'          
+             }
+           }
        }
    }
 }
