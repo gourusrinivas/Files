@@ -6,13 +6,13 @@ pipeline {
                 stage('Parallel Test 1') {
                     agent  { label 'Slave' }
                     steps {
-                        echo 'hello'
+                        bat 'S_with_json.py'
                     }
                 }
                  stage('Parallel Test 2') {
                      agent  { label 'Slave' }
                      steps {
-                         echo 'World'
+                        bat 'S_with_json.py'
                     }
                 }
             }
