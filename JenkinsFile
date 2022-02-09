@@ -4,13 +4,13 @@ pipeline {
         stage('single run') {
             parallel {
                 stage('Parallel Test 1') {
-                    agent { label 'Slave' }
+                    agent any { label 'Slave' }
                     steps {
                         echo 'hello'
                     }
                 }
                  stage('Parallel Test 2') {
-                     agent { label 'Slave' }
+                     agent any { label 'Slave' }
                      steps {
                          echo 'World'
                     }
@@ -19,24 +19,3 @@ pipeline {
         }
     }
  } 
- pipeline {
-    agent any
-    stages {
-        stage('single run') {
-            parallel {
-                stage('Parallel Test 1') {
-                    agent { label 'Slave' }
-                    steps {
-                        echo 'hello'
-                    }
-                }
-                 stage('Parallel Test 2') {
-                     agent { label 'Slave' }
-                     steps {
-                         echo 'World'
-                    }
-                }
-            }
-        }
-    }
- }
