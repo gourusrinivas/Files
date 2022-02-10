@@ -1,11 +1,11 @@
 pipeline {
     agent none
     stages {
-          stage('s')  {
-            parallel {
              stage('Parallel Test 1') {
                 agent  { label 'Slave' }
-                    steps {
+                    steps { 
+                       parallel p1: { build 'p1' } ,
+                       p2 : { build 'p2' }
                         bat 'S_with_json.py'
                     }
                 }
@@ -16,7 +16,5 @@ pipeline {
                   }
              }
          }
-   }
   }
- }
-   
+  
