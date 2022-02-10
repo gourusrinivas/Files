@@ -13,7 +13,7 @@ pipeline {
              stage('Parallel Test 2') {
                 agent  { label 'Slave' }
                      steps {
-                        echo 'HEllo world'
+                        build 'p3'
                   }
              }
          }
