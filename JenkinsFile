@@ -1,6 +1,8 @@
 pipeline {
     agent none
     stages {
+          stage('s')  {
+            parallel {
              stage('Parallel Test 1') {
                 agent  { label 'Slave' }
                     steps {
@@ -15,4 +17,6 @@ pipeline {
              }
          }
    }
+  }
+ }
    
