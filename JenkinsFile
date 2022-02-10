@@ -5,12 +5,14 @@ pipeline {
                 agent  { label 'Slave' }
                     steps { 
                        bat 'S_with_json.py'
+                       build(job : )
                     }
                 }
              stage('Parallel Test 2') {
                 agent  { label 'Slave' }
                      steps {
                         echo 'Hello Worlld'
+                        build(job : )
                   }
              }
          }
